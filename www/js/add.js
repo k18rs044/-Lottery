@@ -13,7 +13,7 @@ var add={
     var Score = self.ncmb.DataStore("ScoreClass");
 
     // [2]インスタンス生成、スコア数値をフィールド名"score"にセット
-    var scoreData = new Score({score: score});
+    var scoreData = new Score({score: score});//scoreを出たものに変える（今回は画像が出るからそれによって条件分岐させ文字列を代入）
 
     // [3]送信処理
     scoreData.save()

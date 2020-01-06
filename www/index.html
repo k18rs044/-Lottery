@@ -7,20 +7,54 @@
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     <script src="keys.js"></script>
-    <script src="js/add.js"></script>
     <script>
+      
         function omikuji (){
             var dice = Math.floor(Math.random() * 3);
             var image_name;
+
+            var ncmb = new NCMB(appKey, clientKey);
+      var TestClass = ncmb.DataStore("Lottery");
+      var resurut="結果";
+     
+
             if (dice == 0) {
                 image_name = "omikuji-daikichi.png";
-                //送信処理？
+                var testClass = new TestClass();
+var testClass = new TestClass();
+    var lottery="大吉";
+      // レコードのフィールドと値を設定
+      testClass.set(resurut,lottery);
+      // レコードをデータベースに登録
+      testClass.save();
+
+
             } else if  (dice == 1) {
                 image_name = "omikuji-chuukichi.png";
-                //送信処理？
+
+
+                var testClass = new TestClass();
+      var lottery="中吉";
+      // レコードのフィールドと値を設定
+      testClass.set(lottery);
+      // レコードをデータベースに登録
+      testClass.save();
+     
+
+
             } else {
                 image_name = "omikuji-hei.png";
-                //送信処理？
+                
+
+                var testClass = new TestClass();
+      var lottery="平";
+      // レコードのフィールドと値を設定
+      testClass.set(lottery);
+      // レコードをデータベースに登録
+      testClass.save();
+   
+
+
             }
         
             document.getElementById("saisyo").style["display"] = "none";

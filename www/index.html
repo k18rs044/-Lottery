@@ -15,30 +15,27 @@
 
             var ncmb = new NCMB(appKey, clientKey);
       var TestClass = ncmb.DataStore("Lottery");
-      var resurut="結果";
-     
+           var b="result";
+           
 
             if (dice == 0) {
                 image_name = "omikuji-daikichi.png";
-                var testClass = new TestClass();
-var testClass = new TestClass();
-    var lottery="大吉";
+                var testClass = new TestClass();          
+var a= "大吉";
+    
       // レコードのフィールドと値を設定
-      testClass.set(resurut,lottery);
-      // レコードをデータベースに登録
-      testClass.save();
-
+      testClass.set(b, a);
+         testClass.save();
+    
 
             } else if  (dice == 1) {
                 image_name = "omikuji-chuukichi.png";
 
 
                 var testClass = new TestClass();
-      var lottery="中吉";
-      // レコードのフィールドと値を設定
-      testClass.set(lottery);
-      // レコードをデータベースに登録
-      testClass.save();
+                var a=new String ("中吉");
+      testClass.set(b,a);
+         testClass.save();
      
 
 
@@ -47,14 +44,9 @@ var testClass = new TestClass();
                 
 
                 var testClass = new TestClass();
-      var lottery="平";
-      // レコードのフィールドと値を設定
-      testClass.set(lottery);
-      // レコードをデータベースに登録
-      testClass.save();
-   
-
-
+                var a=new String ("平");
+      testClass.set(b,a);
+         testClass.save();
             }
         
             document.getElementById("saisyo").style["display"] = "none";
